@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "foundCount": {
+      "type": "integer"
+    },
+    "results": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string"
+            },
+            "avatar": {
+              "type": "string"
+            },
+            "by_user": {
+              "type": "string"
+            },
+            "why_block": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "field": {
+                      "type": "string"
+                    },
+                    "value": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "field",
+                    "value"
+                  ]
+                }
+              ]
+            },
+            "type": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "email",
+            "date",
+            "avatar",
+            "by_user",
+            "why_block",
+            "type"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "foundCount",
+    "results"
+  ]
+}

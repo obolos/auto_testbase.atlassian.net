@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "avatar": {
+      "type": "string"
+    },
+    "password": {
+      "type": "string"
+    },
+    "birthday": {
+      "type": "integer"
+    },
+    "email": {
+      "type": "string"
+    },
+    "gender": {
+      "type": "string"
+    },
+    "date_start": {
+      "type": "integer"
+    },
+    "hobby": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "password",
+    "email"
+  ]
+}
