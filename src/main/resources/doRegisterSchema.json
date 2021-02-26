@@ -29,7 +29,12 @@
   },
   "required": [
     "name",
+    "avatar",
     "password",
-    "email"
+    "birthday",
+    "email",
+    "gender",
+    "date_start",
+    "hobby"
   ]
 }

@@ -32,7 +32,7 @@ public class MagicSearchTest extends MagicSearch {
     @DataProvider
     public Object[][] searchParameters() {
         return new Object[][] {
-                {"example", PartyType.USER, 6, false, Status.ACTUAL, 230} // фио,емейл,дата рождения,ИНН,Название
+                {"example", PartyType.USER, 6, false, Status.ACTUAL} // фио,емейл,дата рождения,ИНН,Название
         };
     }
 
@@ -42,8 +42,8 @@ public class MagicSearchTest extends MagicSearch {
     }
 
     @Test(dataProvider = "searchParameters", description = "Test search parameters", priority = 2)
-    public void doSearchWithParameters(String input, PartyType partyType, int maxCount, Boolean fullSimilarity, Status taskStatus, int statusCode) {
-        searchPeopleWithText(input, partyType, maxCount, fullSimilarity, taskStatus, statusCode);
+    public void doSearchWithParameters(String input, PartyType partyType, int maxCount, Boolean fullSimilarity, Status taskStatus) {
+        searchPeopleWithText(input, partyType, maxCount, fullSimilarity, taskStatus);
     }
 
 

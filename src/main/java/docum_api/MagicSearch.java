@@ -15,7 +15,7 @@ import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInC
 public class MagicSearch extends TestConfig {
 
     @Step("Test input parameters")
-    public void searchPeopleWithText(String input, PartyType partyType, int maxCount, Boolean fullSimilarity, Status taskStatus, int statusCode) {
+    public void searchPeopleWithText(String input, PartyType partyType, int maxCount, Boolean fullSimilarity, Status taskStatus) {
         given().log().uri().
                 param("query", input).
                 param("partyType", partyType).
@@ -24,7 +24,7 @@ public class MagicSearch extends TestConfig {
                 param("taskStatus", taskStatus). // ALL ACTUAL COMPLETE FAIL
                 when().
                 get(TEST_BASE_MAGIC_SEARCH).
-                then().log().body().statusCode(statusCode).log().status();
+                then().log().body();
     }
 
     @Step("Test status codes")
